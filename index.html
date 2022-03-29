@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TP4 Biodata</title>
+  </head>
+  <body>
+  	<main class="container-fluid p-5" style="background-color: lightgray;">
+  		<section id="biodt" class="container-md shadow-sm p-5" style="background-color: white;">
+  			<div class="row text-center mb-5">
+  			<div class="col">
+  				<h2>Biodata</h2>
+  			</div>
+  			</div>
+
+        <!-- nama -->
+
+        <div class="row justify-content-center">
+          <div class="col-md-11">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="name" aria-describedby="name" required>
+            </div>
+
+            <!-- tgl lahir -->
+
+            <div class="mb-3">
+              <label for="birthday" class="form-label">Tanggal Lahir</label>
+              <input type="date" class="form-control" id="birthday" aria-describedby="birthday" required>
+            </div>
+
+            <!-- jenis kelamin -->
+
+            <div class="mb-3">
+              <label for="gender" class="form-label">Jenis Kelamin</label>
+              <div id="inputGender">
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="laki" value="Laki-laki">
+                      <label class="form-check-label" for="laki">Laki-laki</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="prp" value="Perempuan">
+                      <label class="form-check-label" for="prp">Perempuan</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                      <label class="form-check-label" for="other">Other</label>
+                  </div>
+                </div>
+            </div>
+
+            <!-- hobby -->
+            <div class="mb-3">
+              <label for="hobby" class="form-label">Hobi</label>
+              <div id="inputHobby">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Ngoding" id="ngoding">
+                    <label class="form-check-label" for="ngoding">Ngoding</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Rebahan" id="rebahan">
+                    <label class="form-check-label" for="rebahan">Rebahan</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Melamun" id="melamun">
+                    <label class="form-check-label" for="melamun">Melamun</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Baca Buku" id="baca">
+                    <label class="form-check-label" for="bacaBuku">Baca Buku</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Nonton Youtube" id="nontonYoutube">
+                    <label class="form-check-label" for="nontonYtb">Nonton Youtube</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Dengerin Lagu" id="dengerLagu">
+                    <label class="form-check-label" for="dengerLagu">Dengerin Lagu</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" value="Other" id="otherHobby">
+                    <label class="form-check-label" for="otherHobby">Other</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- agama -->
+            <div class="mb-3">
+                <label for="agama" class="form-label">Agama</label>
+                <select class="form-select" id="agama">
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Konghucu">Konghucu</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- pesan -->
+            <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="5"></textarea>
+            </div>
+
+            <!-- submit -->
+            <button type="submit" class="btn btn-primary" onclick="history()">Submit</button>
+
+            <!-- table untuk historynya -->
+            <table class="table mt-5" id="table" style="history: none;">
+              <thead>
+              <tr>
+                <th scope="col">Label</th>
+                <th scope="col">Value</th>
+              </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row">Nama</th>
+                  <td id="historyName"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Tanggal Lahir</th>
+                  <td id="historyBirthday"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Jenis Kelamin</th>
+                  <td id="historyGender"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Hobi</th>
+                  <td id="historyHobby"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Agama</th>
+                  <td id="historyAgama"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Pesan</th>
+                  <td id="historyPesan"></td>
+                </tr>
+              </tbody>
+              </table>
+            </table>
+          </div>
+        </div>
+      </section>
+  	</main>
+  </body>
+  	
+  <!-- JavaScript and dependencies -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="script.js"></script>
+
+  </html>
